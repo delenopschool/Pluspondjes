@@ -2,6 +2,11 @@ document.addEventListener("DOMContentLoaded", function() {
     console.log("Website geladen!");
 });
 
-function toggleMenu() {
-    document.getElementById("nav-links").classList.toggle("show");
-}
+document.addEventListener("DOMContentLoaded", function() {
+    const menuToggle = document.querySelector(".menu-toggle");
+    const navLinks = document.querySelector("#nav-links");
+
+    menuToggle.addEventListener("click", function() {
+        navLinks.classList.toggle("show");
+    });
+});
