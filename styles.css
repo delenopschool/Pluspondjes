@@ -1,42 +1,129 @@
+/* Algemene stijlen */
 body {
-    font-family: Arial, sans-serif;
-    background-color: #f4f4f4;
-    color: #333;
+    font-family: 'Poppins', sans-serif;
+    background: linear-gradient(to right, #ff9966, #ff5e62);
+    color: #fff;
     margin: 0;
     padding: 0;
-}
-
-header {
-    background: #0066cc;
-    color: white;
-    padding: 20px;
     text-align: center;
 }
 
+/* Header */
+header {
+    background: rgba(0, 102, 204, 0.8);
+    padding: 20px;
+    animation: fadeInDown 1s ease-in-out;
+}
+
+/* Navigatie */
 nav ul {
     list-style: none;
     padding: 0;
 }
 
 nav ul li {
-    display: inline;
+    display: inline-block;
     margin: 10px;
 }
 
 nav ul li a {
     color: white;
+    font-weight: bold;
     text-decoration: none;
+    font-size: 18px;
+    transition: all 0.3s ease-in-out;
 }
 
+nav ul li a:hover {
+    color: yellow;
+    transform: scale(1.2);
+    text-shadow: 0px 0px 10px yellow;
+}
+
+/* Secties */
 main {
-    padding: 20px;
+    padding: 40px;
+    animation: fadeInUp 1s ease-in-out;
 }
 
-footer {
-    background: #333;
-    color: white;
-    text-align: center;
+h2 {
+    font-size: 28px;
+    background: linear-gradient(to right, #ffcc00, #ff6699);
     padding: 10px;
-    margin-top: 2
-      0px;
+    display: inline-block;
+    border-radius: 10px;
+    animation: glow 2s infinite alternate;
+}
+
+/* Knoppen met animatie */
+.button {
+    background: linear-gradient(to right, #00ffcc, #0099ff);
+    padding: 15px 20px;
+    font-size: 18px;
+    color: white;
+    border-radius: 25px;
+    border: none;
+    cursor: pointer;
+    transition: all 0.4s ease-in-out;
+}
+
+.button:hover {
+    background: linear-gradient(to right, #0099ff, #00ffcc);
+    transform: scale(1.1);
+    box-shadow: 0px 0px 15px rgba(255, 255, 255, 0.8);
+}
+
+/* Voordelen lijst met animaties */
+ul li {
+    font-size: 20px;
+    padding: 5px;
+    animation: bounce 1s infinite alternate;
+}
+
+/* Footer */
+footer {
+    background: rgba(51, 51, 51, 0.8);
+    padding: 15px;
+    font-size: 14px;
+}
+
+/* Extra Animaties */
+@keyframes fadeInDown {
+    from {
+        opacity: 0;
+        transform: translateY(-30px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes fadeInUp {
+    from {
+        opacity: 0;
+        transform: translateY(30px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes bounce {
+    from {
+        transform: translateY(0);
+    }
+    to {
+        transform: translateY(-10px);
+    }
+}
+
+@keyframes glow {
+    from {
+        text-shadow: 0px 0px 10px #ffcc00;
+    }
+    to {
+        text-shadow: 0px 0px 20px #ff6699;
+    }
 }
